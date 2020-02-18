@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drawing Program</title>
+  <style>
+    #canvas {
+      border: 1px solid black;
+    }
+    cite {
+      display: block;
+      margin-top: 20px;
+    }
+    label {
+      width: 150px;
+      display: inline-block;
+    }
+    .row {
+      margin-bottom: 10px;
+    }
+    #circle {
+      height: 75px;
+      width: 75px;
+      border-radius: 50%;
+      background-color: dodgerblue;
+    }
+    #square {
+      height: 75px;
+      width: 75px;
+      background-color: dodgerblue;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="canvas" height="480" width="480"></canvas>
+  <div>
+    <div class="row">
+      <label for="color">Enter color</label>
+      <input type="color" name="color" id="color" value="#000000">
+    </div>
+    <div class="row">
+      <label for="size">Size</label>
+      <input type="range" name="size" id="size" min="1" max="50">
+    </div>
+    <button id="circle">Circle</button>
+    <button id="square">Square</button>
+    <button id="clear">Clear</button>
+  </div>
+  <script src="drawing-program.js"></script>
+</body>
+</html>
