@@ -7,7 +7,7 @@ L.tileLayer(
   attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery &copy; <a href="https://www.mapbox.com/">Mapbox</a>'
   ,
   id: 'mapbox.streets',
-  accessToken: ''
+  accessToken: 'pk.eyJ1IjoieXAwOTc1ZXUiLCJhIjoiY2s2cG91MTF6MW95czNka2czbTltb3hsaSJ9.dM5fZMq70DrbuDHGVyDA9g'
 }).addTo(map)
 
 
