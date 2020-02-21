@@ -24,16 +24,22 @@ var icon = L.icon({
 })
 
 function iss(retryAttempts) {
+  if (retryAttempts <= 0) {
+    console.log('Too many failed attempts requests :( ')
+    return
+  }
+
   fetch(url)
-    .then(res => res.json())
-    .then((issPosition) => {
-      if (retryAttempts <= 0) {
-        console.log('Too many failed attempts requests :( ')
-        
-        return
+    .then(res => {
+      if (!res.ok) {
+        throw new Error(res.statusText)
       }
+      return res.json()
+    })
+    .then((issPosition) => {
       let latitude = issPosition.latitude
       let longitude = issPosition.longitude
+
       lat.innerHTML = latitude
       long.innerHTML = longitude
 
