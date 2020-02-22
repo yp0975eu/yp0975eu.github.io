@@ -1,5 +1,5 @@
 const url = 'https://api.wheretheiss.at/v1/satellites/25544'
-const updateInterval = 10000 * 60 * 5 // 5 minutes
+const updateInterval = 10000 // 10 seconds
 const lat = document.getElementById('lat')
 const long = document.getElementById('long')
 const updateTime = document.getElementById('update-time')
