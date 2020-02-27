@@ -12,4 +12,4 @@
 
   Code: https://github.com/yp0975eu/capital_city_quiz_base
 
-  Demo: [https://yp0975eu.github.io/week6/iss-location/iss-location.html](https://yp0975eu.github.io/week6/iss-location/iss-location.html)
+  Demo: [https://yp0975eu.github.io/week6/capital_city_quiz_base/index.html](https://yp0975eu.github.io/week6/capital_city_quiz_base/index.html)
