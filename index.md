@@ -7,3 +7,9 @@
 
 # Week 6
 - Iss location [https://yp0975eu.github.io/week6/iss-location/iss-location.html](https://yp0975eu.github.io/week6/iss-location/iss-location.html)
+
+- Capital City Guessing Game:
+
+  Code: https://github.com/yp0975eu/capital_city_quiz_base
+
+  Demo: [https://yp0975eu.github.io/week6/iss-location/iss-location.html](https://yp0975eu.github.io/week6/iss-location/iss-location.html)
