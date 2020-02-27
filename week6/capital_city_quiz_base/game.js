@@ -55,7 +55,7 @@ function getCapitalFromApi(countryCode) {
   const url = `https://api.worldbank.org/v2/country/${countryCode}?format=json`
   return fetch(url).then(res => {
     //  * Verify no errors were encountered in the API call. If an error occurs, display an alert message. 
-    if (!res.ok || res.status !== 200) {
+    if (!res.ok) {
       alert(res.statusText)
       return
     }
