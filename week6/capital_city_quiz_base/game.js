@@ -52,7 +52,7 @@ function processApiResponse(data) {
 
 //  * Use fetch() to make a call to the World Bank API with the two-letter country code (from countriesAndCodes, example 'CN' or 'AF')
 function getCapitalFromApi(countryCode) {
-  const url = `http://api.worldbank.org/v2/country/${countryCode}?format=json`
+  const url = `https://api.worldbank.org/v2/country/${countryCode}?format=json`
   return fetch(url).then(res => {
     //  * Verify no errors were encountered in the API call. If an error occurs, display an alert message. 
     if (!res.ok || !res.stats === 200) {
