@@ -37,7 +37,7 @@ submitButton.addEventListener('click', async function (event) {
   let userAnswer = userAnswerElement.value
   let apiAnswer = await getCapitalFromApi(targetCountry['alpha-2'])
   let correct = userAnswer.toLowerCase() === apiAnswer.toLowerCase()
-  let message = `You guessed ${apiAnswer} ${correct ? 'correctly': 'incorrectly!'}`
+  let message = `You guessed ${apiAnswer} ${correct ? 'correctly' : 'incorrectly'}!`
   resultTextElement.innerText = message
 })
 
@@ -47,18 +47,22 @@ function processApiResponse(data) {
   if (data[payload] && data[payload][countryInformation] && data[payload][countryInformation].capitalCity) {
     return data[payload][countryInformation].capitalCity
   }
-  alert('Api response does not have a capital :(')
+  throw new Error('Api response does not have a capital :(')
 }
 
 //  * Use fetch() to make a call to the World Bank API with the two-letter country code (from countriesAndCodes, example 'CN' or 'AF')
 function getCapitalFromApi(countryCode) {
   const url = `https://api.worldbank.org/v2/country/${countryCode}?format=json`
-  return fetch(url).then(res => {
-    //  * Verify no errors were encountered in the API call. If an error occurs, display an alert message. 
-    if (!res.ok) {
-      alert(res.statusText)
-      return
-    }
-    return res.json()
-  }).then(processApiResponse) //  * If the API call was successful, extract the capital city from the World Bank API response.
+  return fetch(url)
+    .then(res => {
+      //  * Verify no errors were encountered in the API call. If an error occurs, display an alert message. 
+      if (!res.ok) {
+        throw new Error(res.statusText)
+      }
+      return res.json()
+    })
+    .then(processApiResponse) //  * If the API call was successful, extract the capital city from the World Bank API response.
+    .catch(error => {
+      alert(error)
+    })
 }
